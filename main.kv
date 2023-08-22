@@ -1,0 +1,470 @@
+
+
+#MyScreenManager:
+#    Screen:
+#        Mainscreen:
+#            id : menu
+#            name : 'menu'
+#            MDTextField:
+#                id : username
+#                text : 'Henrique'
+#            MDTextField:
+#                id : hora
+#                text : ''
+
+MyScreenManager:#<MyScreenManager>:
+    Mainscreen:
+        name : 'Mainscreen'
+        id : Mainscreen
+        FloatLayout:
+            id: float
+            orientation: 'vertical'
+            size: root.width, root.height
+            MDTextField:
+                id : username
+                text : 'Henrique'
+                hint_text : 'Nome'
+                pos_hint : {'center_x': 0.25,'center_y': 0.9}
+                hint_text_color_normal : [10,10,10,1]
+                icon_right : 'account'
+                size_hint:(None, None)
+                size:(400, 45)
+                #on_release:(self.display_data)
+                text_color_normal : [0,0,0,0]
+                text_color_focus : [1,1,1,1]
+                line_color_normal : [1,0,0,1]
+                line_color_focus : [0,1,0,1]
+                mode : 'fill' 
+                #fill_color : [0,0,0,1]
+
+            MDTextField:
+                id : hora_sum
+                text : '30'
+                hint_text : 'soma min'
+                hint_text_color_normal : [10,10,10,1]
+                pos_hint : {'center_x': .9,'center_y': 0.9}
+                size_hint:(None, None) 
+                size:(150, 45)
+                text_color_normal : [0,0,0,0]
+                text_color_focus : [1,1,1,1]
+                line_color_normal : [1,0,0,1]
+                line_color_focus : [0,1,0,1]
+                mode : 'fill'
+
+            MDTextField:
+                id : hora
+                text : ""#root.get_screen('Mainscreen').ids.hora.text
+                hint_text : 'Hora'
+                hint_text_color_normal : [10,10,10,1]
+                icon_right : 'timer'
+                pos_hint : {'center_x': 0.65,'center_y': 0.9}
+                size_hint:(None, None) 
+                size:(270, 45)
+                text_color_normal : [0,0,0,0]
+                text_color_focus : [1,1,1,1]
+                line_color_normal : [1,0,0,1]
+                line_color_focus : [0,1,0,1]
+                mode : 'fill'
+                
+            MDFlatButton:
+                id : btn1
+                text : 'Feijoada Pequena'
+                pos_hint : {'center_x': 0.2,'center_y': 0.8}
+                size_hint:(None, None) 
+                size:(10, 10)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press : app.display_data(0)
+
+            MDFlatButton:
+                id : btn2
+                text : 'Feijoada Média'
+                pos_hint : {'center_x': 0.52,'center_y': 0.8}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(1)
+
+            MDFlatButton:
+                id : btn3 
+                text : 'Feijoada Grande'
+                pos_hint : {'center_x': 0.827,'center_y': 0.8}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(2)
+
+            MDFlatButton:
+                id : btn4 
+                text : 'Baião Pequeno'
+                pos_hint : {'center_x': .2,'center_y': 0.75}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(3)
+
+            MDFlatButton:
+                id : btn5 
+                text : 'Baião Médio'
+                pos_hint : {'center_x': .52,'center_y': 0.75}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(4)
+
+            MDFlatButton:
+                id : btn6 
+                text : 'Baião Grande'
+                pos_hint : {'center_x': .827,'center_y': 0.75}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(5)
+
+            MDFlatButton:
+                id : btn7 
+                text : 'Parmediana fr \n  Pequena'
+                pos_hint : {'center_x': .2,'center_y': .692}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(6)
+
+            MDFlatButton:
+                id : btn8 
+                text : 'Parmediana fr \n  Média'
+                pos_hint : {'center_x': .52,'center_y': .692}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(7)
+
+            MDFlatButton:
+                id : btn9 
+                text : 'Parmediana fr \n  Grande'
+                pos_hint : {'center_x': 0.827,'center_y': .692}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(8)
+
+            MDFlatButton:
+                id : btn10
+                text : 'Filé Pequeno'
+                pos_hint : {'center_x': .2,'center_y': .635}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(9)
+
+            MDFlatButton:
+                id : btn11
+                text : 'Filé  Médio'
+                pos_hint : {'center_x': .52,'center_y': .635}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(10)
+
+            MDFlatButton:
+                id : btn12
+                text : 'Filé Grande'
+                pos_hint : {'center_x': 0.827,'center_y': .635}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(11)
+
+            MDFlatButton:
+                id : btn13
+                text : 'Bife semc Pequeno'
+                pos_hint : {'center_x': .2,'center_y': .585}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(12)
+
+            MDFlatButton:
+                id : btn14
+                text : 'Bife semc Médio'
+                pos_hint : {'center_x': .52,'center_y': .585}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(13)
+
+            MDFlatButton:
+                id : btn15
+                text : 'Bife semc Grande'
+                pos_hint : {'center_x': 0.827,'center_y': .585}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(14)
+
+            MDFlatButton:
+                id : btn16
+                text : 'Bife ac Pequeno'
+                pos_hint : {'center_x': .2,'center_y': .535}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(15)
+
+            MDFlatButton:
+                id : btn17
+                text : 'Bife ac Médio'
+                pos_hint : {'center_x': .52,'center_y': .535}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(16)
+
+            MDFlatButton:
+                id : btn18
+                text : 'Bife ac Grande'
+                pos_hint : {'center_x': 0.827,'center_y': .535}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(17)
+
+            MDFlatButton:
+                id : btn19
+                text : 'Iscas Filé\n  Pequeno'
+                pos_hint : {'center_x': .2,'center_y': .475}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(18)
+
+            MDFlatButton:
+                id : btn20
+                text : 'Iscas Filé\n  Médio'
+                pos_hint : {'center_x': .52,'center_y': .475}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(19)
+
+            MDFlatButton:
+                id : btn21
+                text : 'Iscas Filé\n  Grande'
+                pos_hint : {'center_x': 0.827,'center_y': .475}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(20)
+
+            MDFlatButton:
+                id : btn22
+                text : 'Iscas Carne\n  Pequeno'
+                pos_hint : {'center_x': .2,'center_y': .405}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(21)
+
+            MDFlatButton:
+                id : btn23
+                text : 'Iscas Carne\n  Médio'
+                pos_hint : {'center_x': .52,'center_y': .405}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(22)
+
+            MDFlatButton:
+                id : btn24
+                text : 'Iscas Carne\n  Grande'
+                pos_hint : {'center_x': 0.827,'center_y': .405}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(23)
+
+            MDFlatButton:
+                id : btn25
+                text : 'Carne deP Pequeno'
+                pos_hint : {'center_x': .2,'center_y': .345}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(24)
+
+            MDFlatButton:
+                id : btn26
+                text : 'Carne deP Médio'
+                pos_hint : {'center_x': .52,'center_y': .345}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(25)
+
+            MDFlatButton:
+                id : btn27
+                text : 'Carne deP Grande'
+                pos_hint : {'center_x': 0.827,'center_y': .345}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(26)
+
+
+            MDFlatButton:
+                id : btn28
+                text : 'Porç Arroz'
+                pos_hint : {'center_x': .2,'center_y': .295}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(27)
+
+            MDFlatButton:
+                id : btn29
+                text : 'Mistura Ext'
+                pos_hint : {'center_x': 0.52,'center_y': .295}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(28)
+
+            MDFlatButton:
+                id : btn30
+                text : 'Por Torresmo'
+                pos_hint : {'center_x': .827,'center_y': .295}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(29)
+
+            MDFlatButton:
+                id : btn31
+                text : 'Coca 2L'
+                pos_hint : {'center_x': .2,'center_y': .245}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(30)
+
+            MDFlatButton:
+                id : btn32
+                text : 'Coca 1L'
+                pos_hint : {'center_x': 0.52,'center_y': .245}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(31)
+
+            MDFlatButton:
+                id : btn33
+                text : 'Coca 600ml'
+                pos_hint : {'center_x': .827,'center_y': .245}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(32)
+
+            MDFlatButton:
+                id : btn34
+                text : 'Coca Lata'
+                pos_hint : {'center_x': .2,'center_y': .195}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(33)
+
+            MDFlatButton:
+                id : btn35
+                text : 'Ovo Extra'
+                pos_hint : {'center_x': 0.52,'center_y': .195}
+                size_hint:(None, None) 
+                size:(30, 30)
+                md_bg_color : [0,0,0,10]
+                font_size : '14sp'
+                on_press: app.display_data(35)
+
+            MDFlatButton
+                id : CLEAR
+                text : 'CLEAR'
+                pos_hint : {'center_x': .2,'center_y': .1}
+                size_hint:(None, None) 
+                size:(120, 120)
+                md_bg_color : [0,0,0,10]
+                font_size : '20sp'
+                on_press: app.display_data16()
+
+            MDFlatButton
+                id : Atual
+                text : ' Hora \natual'
+                pos_hint : {'center_x': .38,'center_y': .1}
+                size_hint:(None, None) 
+                size:(120, 120)
+                md_bg_color : [0,0,0,10]
+                font_size : '20sp'
+                on_press: app.botao_hora()
+
+            MDFlatButton
+                id : Somado
+                text : ' Hora \nsomada'
+                pos_hint : {'center_x': .58,'center_y': 0.1}
+                size_hint:(None, None) 
+                size:(120, 120)
+                md_bg_color : [0,0,0,10]
+                font_size : '20sp'
+                on_press: app.botao_h_somada()
+
+            MDFlatButton
+                id : hora_ini
+                text : ''
+                pos_hint : {'center_x': .07,'center_y': .965}
+                size_hint:(None, None) 
+                size:(50, 50)
+                md_bg_color : [0,0,0,10]
+                font_size : '20sp'
+                on_press: app.display_data17()
+            
+            MDFlatButton
+                id : CRIAR
+                text : 'CRIAR'
+                pos_hint : {'center_x': .78,'center_y': 0.1}
+                size_hint:(None, None) 
+                size:(120, 120)
+                md_bg_color : [0,0,0,10]
+                font_size : '20sp'
+                on_press:app.display_data17()
+
+
